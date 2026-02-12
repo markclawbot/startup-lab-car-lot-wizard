@@ -416,14 +416,82 @@ body {
 .stepper-line { width: 40px; height: 2px; background: var(--border); margin: 0 4px; }
 .stepper-line.completed { background: var(--sage); }
 
+/* ===== DEALER SAYS BLOCK ===== */
+.dealer-says-block {
+  padding: 12px 20px;
+  background: rgba(212,100,74,0.06);
+  border-bottom: 1px solid rgba(212,100,74,0.12);
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.dealer-says-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--coral);
+  margin-right: 6px;
+}
+
+/* ===== HAMBURGER MENU ===== */
+.hamburger {
+  display: none;
+  background: none; border: none; cursor: pointer;
+  width: 32px; height: 24px; position: relative;
+  flex-shrink: 0;
+}
+.hamburger span {
+  display: block; position: absolute; left: 0;
+  width: 100%; height: 2px; background: var(--navy);
+  border-radius: 2px; transition: all 0.25s;
+}
+.hamburger span:nth-child(1) { top: 0; }
+.hamburger span:nth-child(2) { top: 10px; }
+.hamburger span:nth-child(3) { top: 20px; }
+.hamburger.open span:nth-child(1) { top: 10px; transform: rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { top: 10px; transform: rotate(-45deg); }
+
+/* ===== SCROLL MARGIN FOR STICKY NAV ===== */
+.walkaway-section,
+.report-header,
+.stepper,
+.data-summary,
+.tabs,
+.tab-content,
+.phase-content {
+  scroll-margin-top: 64px;
+}
+.screen { padding-top: 0; }
+#report .container { padding-top: 8px; }
+
 /* ===== RESPONSIVE ===== */
+@media (max-width: 480px) {
+  .hamburger { display: block; }
+  .nav-links {
+    display: none;
+    position: absolute; top: 100%; left: 0; right: 0;
+    background: rgba(250,250,247,0.98);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    padding: 8px 20px 16px;
+    gap: 4px;
+  }
+  .nav-links.open { display: flex; }
+  .nav-link { text-align: left; padding: 10px 12px; font-size: 15px; }
+  .nav { position: sticky; }
+}
 @media (max-width: 600px) {
   .data-summary { grid-template-columns: repeat(2, 1fr); }
   .input-grid { grid-template-columns: 1fr; }
   .trust-bar { gap: 20px; }
   .stepper { flex-wrap: wrap; gap: 4px; }
   .stepper-step span { display: none; }
-  .nav-links { gap: 2px; }
+  .nav-links:not(.open) { gap: 2px; }
   .nav-link { padding: 6px 8px; font-size: 13px; }
   .hero { padding: 48px 0 40px; }
   .pricing-grid { grid-template-columns: 1fr; }

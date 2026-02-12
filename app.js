@@ -83,6 +83,23 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinksEl = document.getElementById('nav-links');
+  if (hamburger && navLinksEl) {
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinksEl.classList.toggle('open');
+    });
+    // Close menu on nav link click
+    navLinksEl.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinksEl.classList.remove('open');
+      });
+    });
+  }
+
   // Show landing by default
   showScreen('landing');
 });

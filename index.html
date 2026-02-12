@@ -12,7 +12,10 @@
 <nav class="nav">
   <div class="nav-inner">
     <div class="nav-logo">🧙‍♂️ Car Lot <span>Wizard</span></div>
-    <div class="nav-links">
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
       <button class="nav-link active" data-screen="landing">Home</button>
       <button class="nav-link" data-screen="report">Demo Report</button>
       <button class="nav-link" data-screen="pricing">Pricing</button>
@@ -113,33 +116,36 @@
             <li>Invoice & incentive data</li>
             <li>Opening negotiation script</li>
             <li>F&I Defense Guide</li>
+            <li>Local market conditions</li>
           </ul>
-          <button class="btn btn-ghost btn-full btn-sm" data-action="report">See Demo Report</button>
+          <button class="btn btn-ghost btn-full btn-sm" data-action="report">Get Started</button>
         </div>
         <div class="price-card featured">
           <h3>Custom Playbook</h3>
           <div class="price">$99</div>
-          <div class="price-sub">Personalized strategy</div>
+          <div class="price-sub">Your complete battle plan</div>
           <ul class="feature-list">
             <li>Everything in Single Report</li>
-            <li>Full script library (all phases)</li>
-            <li>Dealer-specific intel</li>
-            <li>Counter-offer simulator</li>
-            <li>Deal Scorecard</li>
+            <li>Full script library — all 4 phases</li>
+            <li>Dealer-specific tactics & intel</li>
+            <li>Counter-offer strategy builder</li>
+            <li>Deal Scorecard after purchase</li>
+            <li>Email support during negotiation</li>
           </ul>
-          <button class="btn btn-primary btn-full btn-sm" data-action="report">See Demo Report</button>
+          <button class="btn btn-primary btn-full btn-sm" data-action="report">Get Started</button>
         </div>
         <div class="price-card">
           <h3>Frequent Buyer</h3>
           <div class="price">$19<small>/mo</small></div>
-          <div class="price-sub">Unlimited reports</div>
+          <div class="price-sub">For dealers & frequent buyers</div>
           <ul class="feature-list">
             <li>Unlimited vehicle reports</li>
             <li>Full script library</li>
-            <li>Priority data updates</li>
+            <li>Priority data refresh</li>
             <li>Deal Scorecard history</li>
+            <li>API access (coming soon)</li>
           </ul>
-          <button class="btn btn-ghost btn-full btn-sm" data-action="report">See Demo Report</button>
+          <button class="btn btn-ghost btn-full btn-sm" data-action="report">Get Started</button>
         </div>
       </div>
     </section>
@@ -224,6 +230,7 @@
       <!-- Opening Phase -->
       <div id="phase-opening" class="phase-content active">
         <div class="script-card">
+          <div class="dealer-says-block"><span class="dealer-says-label">Dealer Says:</span> "The price on this vehicle is $32,920."</div>
           <div class="script-card-header">
             <h3>Your Opening Line</h3>
             <span class="script-label you">You Say</span>
@@ -231,6 +238,7 @@
           <div class="script-block">"I've done my research and I'd like to discuss the out-the-door price for the Camry XLE. I'm seeing fair market value around $29,800 to $30,200 based on current incentives and regional pricing. Can you walk me through your best out-the-door number?"<button class="copy-btn">Copy</button></div>
         </div>
         <div class="script-card">
+          <div class="dealer-says-block"><span class="dealer-says-label">Dealer Says:</span> "Well, the MSRP on this one is $32,920."</div>
           <div class="script-card-header">
             <h3>If They Start with MSRP</h3>
             <span class="script-label you">You Say</span>
@@ -242,6 +250,7 @@
       <!-- Counter Phase -->
       <div id="phase-counter" class="phase-content">
         <div class="script-card">
+          <div class="dealer-says-block"><span class="dealer-says-label">Dealer Says:</span> "How about $450 a month over 72 months?"</div>
           <div class="script-card-header">
             <h3>Monthly Payment Redirect</h3>
             <span class="script-label you">You Say</span>
@@ -249,13 +258,15 @@
           <div class="script-block">"I appreciate that, but let's keep our discussion on the total price rather than monthly payments. Once we agree on the out-the-door number, I'll figure out the financing that works best for me."<button class="copy-btn">Copy</button></div>
         </div>
         <div class="script-card">
+          <div class="dealer-says-block"><span class="dealer-says-label">Dealer Says:</span> "This is already our best price."</div>
           <div class="script-card-header">
             <h3>"Can't Go Any Lower"</h3>
             <span class="script-label you">You Say</span>
           </div>
-          <div class="script-block">"I understand your position. I've received quotes from Hendrick Toyota at $29,600. I'd prefer to work with you — can you get closer to that number?"<button class="copy-btn">Copy</button></div>
+          <div class="script-block">"I understand your position. I've received quotes from Hendrick Toyota at $29,600. I'd prefer to work with you -- can you get closer to that number?"<button class="copy-btn">Copy</button></div>
         </div>
         <div class="script-card">
+          <div class="dealer-says-block"><span class="dealer-says-label">Dealer Says:</span> "Best I can do is $31,500."</div>
           <div class="script-card-header">
             <h3>Counter Their First Offer</h3>
             <span class="script-label you">You Say</span>
@@ -346,6 +357,7 @@
       <!-- Closing Phase -->
       <div id="phase-closing" class="phase-content">
         <div class="script-card">
+          <div class="dealer-says-block"><span class="dealer-says-label">Dealer Says:</span> "Alright, I think we have a deal. Let me get the paperwork started."</div>
           <div class="script-card-header">
             <h3>Final Agreement</h3>
             <span class="script-label you">You Say</span>
@@ -353,11 +365,12 @@
           <div class="script-block">"Before I sign, I'd like to review the complete out-the-door breakdown: purchase price, tax, title, registration, and any dealer fees. Can you print that itemized for me?"<button class="copy-btn">Copy</button></div>
         </div>
         <div class="script-card">
+          <div class="dealer-says-block"><span class="dealer-says-label">Dealer Says:</span> "I really can't go any lower than this. This is the best we can do."</div>
           <div class="script-card-header">
             <h3>Walking Away (If Needed)</h3>
             <span class="script-label you">You Say</span>
           </div>
-          <div class="script-block">"I appreciate your time today. It seems we're not able to meet at a number I'm comfortable with. Here's my card — if anything changes, I'd love to hear from you. I'll be making a decision this week."<button class="copy-btn">Copy</button></div>
+          <div class="script-block">"I appreciate your time today. It seems we're not able to meet at a number I'm comfortable with. Here's my card -- if anything changes, I'd love to hear from you. I'll be making a decision this week."<button class="copy-btn">Copy</button></div>
         </div>
       </div>
     </div>
@@ -486,7 +499,7 @@
   <div class="container">
     <div class="pricing-hero">
       <h1>Simple, transparent pricing</h1>
-      <p>No subscriptions required. Pay for what you need.</p>
+      <p>Simple pricing for every buyer.</p>
     </div>
 
     <div class="pricing-grid">
