@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Lot Wizard — Walk In Prepared</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">🧙‍♂️ Car Lot <span>Wizard</span></div>
+    <div class="nav-links">
+      <button class="nav-link active" data-screen="landing">Home</button>
+      <button class="nav-link" data-screen="report">Demo Report</button>
+      <button class="nav-link" data-screen="pricing">Pricing</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== LANDING PAGE ===== -->
+<div id="landing" class="screen active">
+  <div class="container">
+    <section class="hero">
+      <div class="hero-badge">Used by 12,000+ prepared buyers</div>
+      <h1>Know your number.<br>Know your <em>words</em>.</h1>
+      <p class="hero-sub">Car Lot Wizard gives you the fair price <strong>and</strong> the exact scripts to get it. Walk into any dealership with quiet confidence.</p>
+
+      <div class="vehicle-input-card">
+        <div class="input-grid">
+          <div class="input-group">
+            <label>Year</label>
+            <select>
+              <option>2025</option>
+              <option>2024</option>
+              <option>2023</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Make</label>
+            <select>
+              <option>Toyota</option>
+              <option>Honda</option>
+              <option>Ford</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>Model</label>
+            <select>
+              <option>Camry XLE</option>
+              <option>Camry SE</option>
+              <option>Camry LE</option>
+            </select>
+          </div>
+          <div class="input-group">
+            <label>ZIP Code</label>
+            <input type="text" value="29401" placeholder="ZIP Code">
+          </div>
+        </div>
+        <button id="generate-btn" class="btn btn-primary btn-full">Get My Negotiation Report →</button>
+      </div>
+    </section>
+
+    <section class="trust-bar">
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        Data-backed pricing
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Word-for-word scripts
+      </div>
+      <div class="trust-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        Ready in 60 seconds
+      </div>
+    </section>
+
+    <section>
+      <p class="section-label">How It Works</p>
+      <h2 class="section-title">Three steps to dealership confidence</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Enter Your Vehicle</h3>
+          <p>Tell us what you're buying and your ZIP. We pull real market data instantly.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Get Your Number</h3>
+          <p>Your personalized Walkaway Number — the maximum you should pay, backed by data.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Use the Scripts</h3>
+          <p>Word-for-word responses for every dealer tactic. Copy them right on your phone.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="pricing-section">
+      <p class="section-label">Pricing</p>
+      <h2 class="section-title">One car. One price. Total confidence.</h2>
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Single Report</h3>
+          <div class="price">$29</div>
+          <div class="price-sub">One vehicle, one report</div>
+          <ul class="feature-list">
+            <li>Walkaway Number Calculator</li>
+            <li>Invoice & incentive data</li>
+            <li>Opening negotiation script</li>
+            <li>F&I Defense Guide</li>
+          </ul>
+          <button class="btn btn-ghost btn-full btn-sm" data-action="report">See Demo Report</button>
+        </div>
+        <div class="price-card featured">
+          <h3>Custom Playbook</h3>
+          <div class="price">$99</div>
+          <div class="price-sub">Personalized strategy</div>
+          <ul class="feature-list">
+            <li>Everything in Single Report</li>
+            <li>Full script library (all phases)</li>
+            <li>Dealer-specific intel</li>
+            <li>Counter-offer simulator</li>
+            <li>Deal Scorecard</li>
+          </ul>
+          <button class="btn btn-primary btn-full btn-sm" data-action="report">See Demo Report</button>
+        </div>
+        <div class="price-card">
+          <h3>Frequent Buyer</h3>
+          <div class="price">$19<small>/mo</small></div>
+          <div class="price-sub">Unlimited reports</div>
+          <ul class="feature-list">
+            <li>Unlimited vehicle reports</li>
+            <li>Full script library</li>
+            <li>Priority data updates</li>
+            <li>Deal Scorecard history</li>
+          </ul>
+          <button class="btn btn-ghost btn-full btn-sm" data-action="report">See Demo Report</button>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="footer">© 2026 Car Lot Wizard. Walk in prepared.</footer>
+</div>
+
+<!-- ===== REPORT DASHBOARD ===== -->
+<div id="report" class="screen">
+  <div class="container">
+    <div class="report-header">
+      <p class="report-vehicle">Your Negotiation Report</p>
+      <h1 style="font-size:24px;font-weight:700;margin-bottom:4px;">2025 Toyota Camry XLE</h1>
+      <p class="text-secondary text-sm">Charleston, SC 29401 · Generated today</p>
+    </div>
+
+    <!-- Stepper -->
+    <div class="stepper mt-32">
+      <div class="stepper-step completed"><div class="stepper-dot">✓</div><span>Research</span></div>
+      <div class="stepper-line completed"></div>
+      <div class="stepper-step active"><div class="stepper-dot">2</div><span>Prepare</span></div>
+      <div class="stepper-line"></div>
+      <div class="stepper-step"><div class="stepper-dot">3</div><span>Negotiate</span></div>
+      <div class="stepper-line"></div>
+      <div class="stepper-step"><div class="stepper-dot">4</div><span>Close</span></div>
+    </div>
+
+    <!-- Walkaway Number -->
+    <section class="walkaway-section">
+      <p class="walkaway-label">Your Walkaway Number</p>
+      <div class="walkaway-number">$29,800</div>
+      <div class="range-bar">
+        <div class="range-segment great"></div>
+        <div class="range-segment good"></div>
+        <div class="range-segment fair"></div>
+        <div class="range-segment walk"></div>
+      </div>
+      <div class="range-labels">
+        <span class="sage">$29,200 Great</span>
+        <span>$30,200 Good</span>
+        <span>$31,100 Fair</span>
+        <span class="coral">$31,100+ Walk</span>
+      </div>
+    </section>
+
+    <!-- Data Summary -->
+    <div class="data-summary">
+      <div class="data-item">
+        <div class="value">$30,815</div>
+        <div class="label">Invoice</div>
+      </div>
+      <div class="data-item">
+        <div class="value">$1,500</div>
+        <div class="label">Incentives</div>
+      </div>
+      <div class="data-item">
+        <div class="value">47</div>
+        <div class="label">Avg Days on Lot</div>
+      </div>
+      <div class="data-item">
+        <div class="value">$32,920</div>
+        <div class="label">MSRP</div>
+      </div>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab active" data-tab="tab-scripts">Scripts</button>
+      <button class="tab" data-tab="tab-fni">F&I Defense</button>
+      <button class="tab" data-tab="tab-data">Market Data</button>
+    </div>
+
+    <!-- SCRIPTS TAB -->
+    <div id="tab-scripts" class="tab-content active">
+      <div class="phase-nav">
+        <button class="phase-btn active" data-phase="phase-opening">Opening</button>
+        <button class="phase-btn" data-phase="phase-counter">Counters</button>
+        <button class="phase-btn" data-phase="phase-tactics">Dealer Tactics</button>
+        <button class="phase-btn" data-phase="phase-closing">Closing</button>
+      </div>
+
+      <!-- Opening Phase -->
+      <div id="phase-opening" class="phase-content active">
+        <div class="script-card">
+          <div class="script-card-header">
+            <h3>Your Opening Line</h3>
+            <span class="script-label you">You Say</span>
+          </div>
+          <div class="script-block">"I've done my research and I'd like to discuss the out-the-door price for the Camry XLE. I'm seeing fair market value around $29,800 to $30,200 based on current incentives and regional pricing. Can you walk me through your best out-the-door number?"<button class="copy-btn">Copy</button></div>
+        </div>
+        <div class="script-card">
+          <div class="script-card-header">
+            <h3>If They Start with MSRP</h3>
+            <span class="script-label you">You Say</span>
+          </div>
+          <div class="script-block">"I appreciate you starting there, but I'd like to work from invoice rather than MSRP. I know the invoice on this trim is around $30,815, and with the current $1,500 loyalty incentive, I think we can find a number that works for both of us."<button class="copy-btn">Copy</button></div>
+        </div>
+      </div>
+
+      <!-- Counter Phase -->
+      <div id="phase-counter" class="phase-content">
+        <div class="script-card">
+          <div class="script-card-header">
+            <h3>Monthly Payment Redirect</h3>
+            <span class="script-label you">You Say</span>
+          </div>
+          <div class="script-block">"I appreciate that, but let's keep our discussion on the total price rather than monthly payments. Once we agree on the out-the-door number, I'll figure out the financing that works best for me."<button class="copy-btn">Copy</button></div>
+        </div>
+        <div class="script-card">
+          <div class="script-card-header">
+            <h3>"Can't Go Any Lower"</h3>
+            <span class="script-label you">You Say</span>
+          </div>
+          <div class="script-block">"I understand your position. I've received quotes from Hendrick Toyota at $29,600. I'd prefer to work with you — can you get closer to that number?"<button class="copy-btn">Copy</button></div>
+        </div>
+        <div class="script-card">
+          <div class="script-card-header">
+            <h3>Counter Their First Offer</h3>
+            <span class="script-label you">You Say</span>
+          </div>
+          <div class="script-block">"Thank you for that number. Based on my research, I'd like to counter at $29,400. This Camry has been on the lot for 47 days, and I'm ready to close today if we can agree on a fair price."<button class="copy-btn">Copy</button></div>
+        </div>
+      </div>
+
+      <!-- Tactics Phase -->
+      <div id="phase-tactics" class="phase-content">
+        <div class="tactic-card open">
+          <div class="tactic-header">
+            <h4>🎯 "Let me talk to my manager"</h4>
+            <span class="tactic-chevron">▾</span>
+          </div>
+          <div class="tactic-body">
+            <div class="tactic-body-inner">
+              <div class="tactic-pair">
+                <p class="speaker dealer">Dealer Says</p>
+                <div class="dialogue">"Let me take this to my manager and see what I can do for you."<button class="copy-btn">Copy</button></div>
+              </div>
+              <div class="tactic-pair mt-16">
+                <p class="speaker you">You Say</p>
+                <div class="dialogue">"Of course, take your time. While you're there, please confirm the out-the-door price including all fees. I want to make sure there are no surprises."<button class="copy-btn">Copy</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tactic-card">
+          <div class="tactic-header">
+            <h4>⏳ "This price is only good today"</h4>
+            <span class="tactic-chevron">▾</span>
+          </div>
+          <div class="tactic-body">
+            <div class="tactic-body-inner">
+              <div class="tactic-pair">
+                <p class="speaker dealer">Dealer Says</p>
+                <div class="dialogue">"I can only hold this price until end of day. My manager approved this special deal just for you."<button class="copy-btn">Copy</button></div>
+              </div>
+              <div class="tactic-pair mt-16">
+                <p class="speaker you">You Say</p>
+                <div class="dialogue">"I appreciate the urgency, but a good deal today will still be a good deal tomorrow. I'd like to take the evening to review everything. If this is truly your best offer, it should still be available."<button class="copy-btn">Copy</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tactic-card">
+          <div class="tactic-header">
+            <h4>💰 "What monthly payment are you looking for?"</h4>
+            <span class="tactic-chevron">▾</span>
+          </div>
+          <div class="tactic-body">
+            <div class="tactic-body-inner">
+              <div class="tactic-pair">
+                <p class="speaker dealer">Dealer Says</p>
+                <div class="dialogue">"What monthly payment range are you comfortable with? Let's work backwards from there."<button class="copy-btn">Copy</button></div>
+              </div>
+              <div class="tactic-pair mt-16">
+                <p class="speaker you">You Say</p>
+                <div class="dialogue">"I'd rather focus on the total out-the-door price first. Monthly payments can be adjusted with different terms, so let's nail down the purchase price and then I'll handle the financing."<button class="copy-btn">Copy</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tactic-card">
+          <div class="tactic-header">
+            <h4>🔄 "We're already losing money on this deal"</h4>
+            <span class="tactic-chevron">▾</span>
+          </div>
+          <div class="tactic-body">
+            <div class="tactic-body-inner">
+              <div class="tactic-pair">
+                <p class="speaker dealer">Dealer Says</p>
+                <div class="dialogue">"At this price, we're barely breaking even. We actually lose money after overhead."<button class="copy-btn">Copy</button></div>
+              </div>
+              <div class="tactic-pair mt-16">
+                <p class="speaker you">You Say</p>
+                <div class="dialogue">"I understand margins are tight. That said, I know there are manufacturer holdbacks and incentives that factor in. My offer is based on fair market data, and I believe it's reasonable for both sides."<button class="copy-btn">Copy</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing Phase -->
+      <div id="phase-closing" class="phase-content">
+        <div class="script-card">
+          <div class="script-card-header">
+            <h3>Final Agreement</h3>
+            <span class="script-label you">You Say</span>
+          </div>
+          <div class="script-block">"Before I sign, I'd like to review the complete out-the-door breakdown: purchase price, tax, title, registration, and any dealer fees. Can you print that itemized for me?"<button class="copy-btn">Copy</button></div>
+        </div>
+        <div class="script-card">
+          <div class="script-card-header">
+            <h3>Walking Away (If Needed)</h3>
+            <span class="script-label you">You Say</span>
+          </div>
+          <div class="script-block">"I appreciate your time today. It seems we're not able to meet at a number I'm comfortable with. Here's my card — if anything changes, I'd love to hear from you. I'll be making a decision this week."<button class="copy-btn">Copy</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- F&I TAB -->
+    <div id="tab-fni" class="tab-content">
+      <p class="text-secondary text-sm mb-24">The F&I office is where dealers make the most profit. Here's exactly what to expect and what to say.</p>
+
+      <div class="fni-card">
+        <div class="fni-verdict decline">✕</div>
+        <div class="fni-content">
+          <h4>Extended Warranty</h4>
+          <div class="verdict-label decline">Decline</div>
+          <p>Toyota's factory warranty (3yr/36k bumper-to-bumper, 5yr/60k powertrain) is excellent. Extended warranties are marked up 50-200% at the dealer.</p>
+          <div class="fni-script">"I appreciate the offer on the extended warranty, but I'll be declining that today. The factory coverage is sufficient for my needs."</div>
+        </div>
+      </div>
+
+      <div class="fni-card">
+        <div class="fni-verdict decline">✕</div>
+        <div class="fni-content">
+          <h4>Paint Protection / Fabric Coating</h4>
+          <div class="verdict-label decline">Decline</div>
+          <p>Typically costs $400-$800 at the dealer for a product worth $50-$100. A bottle of quality sealant does the same job.</p>
+          <div class="fni-script">"No thank you on the paint protection. I have my own detailing solution that I'm happy with."</div>
+        </div>
+      </div>
+
+      <div class="fni-card">
+        <div class="fni-verdict decline">✕</div>
+        <div class="fni-content">
+          <h4>Dealer-Installed Accessories</h4>
+          <div class="verdict-label decline">Decline</div>
+          <p>Window tinting, mud flaps, etc. are marked up 3-5x at the dealer. Buy aftermarket and save hundreds.</p>
+          <div class="fni-script">"I'll pass on the accessories for now. I prefer to handle those on my own after purchase."</div>
+        </div>
+      </div>
+
+      <div class="fni-card">
+        <div class="fni-verdict consider">◐</div>
+        <div class="fni-content">
+          <h4>GAP Insurance</h4>
+          <div class="verdict-label consider">Consider (but not here)</div>
+          <p>GAP insurance can be valuable if you're financing with a low down payment. But buy it through your insurance company or credit union for 50-70% less.</p>
+          <div class="fni-script">"I'll look into GAP coverage through my own insurance provider, thank you."</div>
+        </div>
+      </div>
+
+      <div class="fni-card">
+        <div class="fni-verdict decline">✕</div>
+        <div class="fni-content">
+          <h4>VIN Etching</h4>
+          <div class="verdict-label decline">Decline</div>
+          <p>Dealers charge $200-$400 for something you can do yourself for $25. Minimal theft deterrent value.</p>
+          <div class="fni-script">"No thank you on the VIN etching. I'll handle that independently if I decide I want it."</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DATA TAB -->
+    <div id="tab-data" class="tab-content">
+      <p class="text-secondary text-sm mb-24">Market intelligence for the 2025 Toyota Camry XLE in the Charleston, SC area.</p>
+
+      <div class="script-card" style="padding:24px;">
+        <h3 style="margin-bottom:16px;">Price Breakdown</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:14px;">
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:10px 0;color:var(--text-secondary);">MSRP</td>
+            <td style="padding:10px 0;text-align:right;font-weight:600;">$32,920</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:10px 0;color:var(--text-secondary);">Dealer Invoice</td>
+            <td style="padding:10px 0;text-align:right;font-weight:600;">$30,815</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:10px 0;color:var(--text-secondary);">Dealer Holdback (est.)</td>
+            <td style="padding:10px 0;text-align:right;font-weight:600;">$658</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:10px 0;color:var(--text-secondary);">Regional Incentive</td>
+            <td style="padding:10px 0;text-align:right;font-weight:600;color:var(--sage);">−$1,500</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:10px 0;color:var(--text-secondary);">True Dealer Cost (est.)</td>
+            <td style="padding:10px 0;text-align:right;font-weight:600;">$28,657</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 0;font-weight:700;">Your Walkaway Number</td>
+            <td style="padding:10px 0;text-align:right;font-weight:800;font-size:18px;color:var(--navy);">$29,800</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="script-card mt-16" style="padding:24px;">
+        <h3 style="margin-bottom:16px;">Local Market Conditions</h3>
+        <table style="width:100%;border-collapse:collapse;font-size:14px;">
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:10px 0;color:var(--text-secondary);">Avg Days on Lot</td>
+            <td style="padding:10px 0;text-align:right;font-weight:600;">47 days</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:10px 0;color:var(--text-secondary);">Supply Level</td>
+            <td style="padding:10px 0;text-align:right;font-weight:600;">Above Average</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:10px 0;color:var(--text-secondary);">Dealers Within 50mi</td>
+            <td style="padding:10px 0;text-align:right;font-weight:600;">6 dealers</td>
+          </tr>
+          <tr style="border-bottom:1px solid var(--border);">
+            <td style="padding:10px 0;color:var(--text-secondary);">Matching Inventory</td>
+            <td style="padding:10px 0;text-align:right;font-weight:600;">14 vehicles</td>
+          </tr>
+          <tr>
+            <td style="padding:10px 0;color:var(--text-secondary);">Buyer Leverage</td>
+            <td style="padding:10px 0;text-align:right;font-weight:700;color:var(--sage);">Strong ↑</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">© 2026 Car Lot Wizard. Walk in prepared.</footer>
+</div>
+
+<!-- ===== PRICING PAGE ===== -->
+<div id="pricing" class="screen">
+  <div class="container">
+    <div class="pricing-hero">
+      <h1>Simple, transparent pricing</h1>
+      <p>No subscriptions required. Pay for what you need.</p>
+    </div>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Single Report</h3>
+        <div class="price">$29</div>
+        <div class="price-sub">One vehicle, one report</div>
+        <ul class="feature-list">
+          <li>Walkaway Number Calculator</li>
+          <li>Invoice & incentive data</li>
+          <li>Opening negotiation script</li>
+          <li>F&I Defense Guide</li>
+          <li>Local market conditions</li>
+        </ul>
+        <button class="btn btn-ghost btn-full">Get Started</button>
+      </div>
+      <div class="price-card featured">
+        <h3>Custom Playbook</h3>
+        <div class="price">$99</div>
+        <div class="price-sub">Your complete battle plan</div>
+        <ul class="feature-list">
+          <li>Everything in Single Report</li>
+          <li>Full script library — all 4 phases</li>
+          <li>Dealer-specific tactics & intel</li>
+          <li>Counter-offer strategy builder</li>
+          <li>Deal Scorecard after purchase</li>
+          <li>Email support during negotiation</li>
+        </ul>
+        <button class="btn btn-primary btn-full">Get Started</button>
+      </div>
+      <div class="price-card">
+        <h3>Frequent Buyer</h3>
+        <div class="price">$19<small>/mo</small></div>
+        <div class="price-sub">For dealers & frequent buyers</div>
+        <ul class="feature-list">
+          <li>Unlimited vehicle reports</li>
+          <li>Full script library</li>
+          <li>Priority data refresh</li>
+          <li>Deal Scorecard history</li>
+          <li>API access (coming soon)</li>
+        </ul>
+        <button class="btn btn-ghost btn-full">Get Started</button>
+      </div>
+    </div>
+
+    <div class="text-center mt-32">
+      <p class="text-secondary text-sm">All plans include a 100% money-back guarantee. If you don't save at least 5x the cost, we refund you.</p>
+    </div>
+  </div>
+  <footer class="footer">© 2026 Car Lot Wizard. Walk in prepared.</footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
